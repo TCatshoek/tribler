@@ -6,7 +6,7 @@ import psutil
 from Tribler.dispersy.dispersy import Dispersy
 from Tribler.dispersy.endpoint import StandaloneEndpoint
 from Tribler.dispersy.payload import Payload
-from cloudomate.util.config import UserOptions
+from cloudomate.util.settings import Settings
 from twisted.python.log import msg
 from twisted.internet import reactor
 from twisted.internet.task import LoopingCall
@@ -22,7 +22,7 @@ class ServerStats(object):
         dna.read_dictionary()
         config = PlebNetConfig()
         config.load()
-        user = UserOptions()
+        user = Settings()
         user.read_settings()
 
         if dictionary:
